@@ -115,7 +115,7 @@ namespace TimeApp
             TimeSpan futa_futa = TimeSpan.Parse("22:00");       // 2200 night
             TimeSpan futa_san = TimeSpan.Parse("23:00");        // 2300 night */
 
-            if(DateTime.Now.Hour == 16 && DateTime.Now.Minute == 11)
+            if(DateTime.Now.Hour == 17 && DateTime.Now.Minute == 31)
             {
                 string exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 string filePath = @"Resources\temp\Akizuki-01.wav";
