@@ -88,36 +88,52 @@ namespace TimeApp
         {
             audioPlayer = new SoundPlayer();
 
-            string timeString = DateTime.Now.ToString("HH");    //get current time
-            int timeInt;
-            int.TryParse(timeString, out timeInt);              //parse string datetime to int
-
+            string timeString = DateTime.Now.ToString("HH:mm");                                    //get current time
             string exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);   //get exe file pathing
 
             //switch time cases
-            switch (timeInt)
+            switch (timeString)
             {
-                case 00:
+                case "00:00":
                     string path0 = @"Resources\temp\Akizuki-00.wav";     //path of voiceline for time 0000
                     String path00 = Path.Combine(exePath, path0);      //combine file pathing
 
                     audioPlayer.SoundLocation = path00;       //told audioPlayer the voiceline location
                     audioPlayer.Play();                         //play the voiceline
                     break;
-                case 01:
-                    string path1 = @"Resources\temp\Akizuki-01.wav";     //path of voiceline for time 0000
+
+                case "01:00":
+                    string path1 = @"Resources\temp\Akizuki-01.wav";     //path of voiceline for time 0100
                     string fullPath = Path.Combine(exePath, path1);      //combine file pathing
 
                     audioPlayer.SoundLocation = fullPath;       //told audioPlayer the voiceline location
                     audioPlayer.Play();                         //play the voiceline
                     break;
-                case 02:
-                    string path2 = @"Resources\temp\Akizuki-02.wav";     //path of voiceline for time 0000
+
+                case "02:00":
+                    string path2 = @"Resources\temp\Akizuki-02.wav";     //path of voiceline for time 0200
                     string path02 = Path.Combine(exePath, path2);      //combine file pathing
 
                     audioPlayer.SoundLocation = path02;       //told audioPlayer the voiceline location
                     audioPlayer.Play();                         //play the voiceline
                     break;
+
+                case "03:00":
+                    string path3 = @"Resources\temp\Akizuki-03.wav";     //path of voiceline for time 0300
+                    string path03 = Path.Combine(exePath, path3);      //combine file pathing
+
+                    audioPlayer.SoundLocation = path03;       //told audioPlayer the voiceline location
+                    audioPlayer.Play();                         //play the voiceline
+                    break;
+
+                case "04:00":
+                    string path4 = @"Resources\temp\Akizuki-04.wav";     //path of voiceline for time 0400
+                    string path04 = Path.Combine(exePath, path4);      //combine file pathing
+
+                    audioPlayer.SoundLocation = path04;       //told audioPlayer the voiceline location
+                    audioPlayer.Play();                         //play the voiceline
+                    break;
+
             }
         }
     }

@@ -78,9 +78,5 @@
                    TextAlignment="Center"
                    Width="70" Height="15"
                    />
-        <Calendar HorizontalAlignment="Left"
-                  VerticalAlignment="Top"
-                  Margin="20,235,0,0"
-                  Height="170" Width="200"/>
     </Grid>
 </Window>
