@@ -5,78 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeApp"
         mc:Ignorable="d"
-        Title="TimeApp" Height="500" Width="500"
+        Title="TimeApp" Height="400" Width="350"
         Icon="Resources/image/clock-outline.ico"
         ResizeMode="CanMinimize">
-    <Grid ShowGridLines="False">
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Image HorizontalAlignment="Center"
+    <Border Padding="10">
+        <StackPanel>
+            <Grid ShowGridLines="False">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image HorizontalAlignment="Center"
                VerticalAlignment="Center"
                Height="180" 
-               Margin="30,30,37,262"
+               Margin="30,30,37,0"
                Width="180" 
                Source="Resources/image/ClockFace.png"
                RenderTransformOrigin="0.5,0.5">
-        </Image>
+                </Image>
 
-        <Line Name="secondHand"
+                <Line Name="secondHand"
               Stroke="Red" 
               StrokeThickness="1.25"
               X1="0" Y1="-80"
               X2="0" Y2="0"
               RenderTransformOrigin="0.5,0.5" 
-              Margin="30,30,37,262"
+              Margin="30,30,37,0"
               HorizontalAlignment="Center"
               VerticalAlignment="Center">
-            <Line.RenderTransform>
-                <RotateTransform x:Name="secondHandTransform"
+                    <Line.RenderTransform>
+                        <RotateTransform x:Name="secondHandTransform"
                                  Angle="0"/>
-            </Line.RenderTransform>
-        </Line>
+                    </Line.RenderTransform>
+                </Line>
 
-        <Line Name="minuteHand"
+                <Line Name="minuteHand"
               Stroke="Black"
               StrokeThickness="1.5"
               X1="0" Y1="-65"
               X2="0" Y2="0"
               RenderTransformOrigin="0.5,0.5" 
-              Margin="30,30,37,262"
+              Margin="30,30,37,0"
               HorizontalAlignment="Center"
               VerticalAlignment="Center">
-            <Line.RenderTransform>
-                <RotateTransform x:Name="minuteHandTransform"
+                    <Line.RenderTransform>
+                        <RotateTransform x:Name="minuteHandTransform"
                                  Angle="0"/>
-            </Line.RenderTransform>
-        </Line>
+                    </Line.RenderTransform>
+                </Line>
 
-        <Line Name="hourHand"
+                <Line Name="hourHand"
               Stroke="Black"
               StrokeThickness="1.5"
               X1="0" Y1="-50"
               X2="0" Y2="0"
               RenderTransformOrigin="0.5,0.5" 
-              Margin="30,30,37,262"
+              Margin="30,30,37,0"
               HorizontalAlignment="Center"
               VerticalAlignment="Center">
-            <Line.RenderTransform>
-                <RotateTransform x:Name="hourHandTransform"
+                    <Line.RenderTransform>
+                        <RotateTransform x:Name="hourHandTransform"
                                  Angle="0">
-                </RotateTransform>
-            </Line.RenderTransform>
-        </Line>
+                        </RotateTransform>
+                    </Line.RenderTransform>
+                </Line>
 
-        <TextBlock Name="digital_clock"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Margin="85,210,0,0"
-                   TextWrapping="Wrap"
-                   Text="text here"
-                   TextAlignment="Center"
-                   Width="70" Height="15"
-                   />
-    </Grid>
+            </Grid>
+
+            <TextBlock Name="digital_clock"
+                       TextAlignment="Center"
+                   Margin="0 10 0 0"
+                   Text="text here"/>
+
+            <TextBlock Margin="0 10 0 0"
+                       FontWeight="Bold"
+                       Text="Voice : Destroyer - Akizuki"/>
+        </StackPanel>
+    </Border>
+
 </Window>
