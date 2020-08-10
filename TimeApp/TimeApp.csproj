@@ -72,7 +72,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Resources\Data\Model\Voice.cs" />
+    <Compile Include="Resources\Data\Model\TimeM.cs" />
+    <Compile Include="Resources\Data\Model\VoiceM.cs" />
+    <Compile Include="Resources\Data\ViewModel\SettingVM.cs" />
+    <Compile Include="Resources\Data\ViewModel\TimeVM.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -208,8 +211,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Data\ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
